@@ -1,0 +1,22 @@
+h1{
+    color: white;
+}
+th {
+    background-color: #333; 
+    color: white; 
+}
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.uno{
+    background-color: #333;
+    color: white;
+}
+.dos{
+    background-color: whitesmoke;
+}
+.td{
+    background-color: bisque;
+   
+}

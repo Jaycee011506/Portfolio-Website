@@ -1,0 +1,51 @@
+
+body {
+    background-color: #3D3D3D;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  h2 {
+    color: #FF0000; 
+    text-decoration: underline;
+  }
+  
+  h3 {
+    color: #FF0000; 
+  }
+  
+  h3 em {
+    font-style: italic;
+    color: #FFFFFF; 
+  }
+  
+  ol.session1 {
+    color: #00FFFF; 
+    font-size: 18px;
+    list-style-type: decimal;
+  }
+  
+  ol.session2 {
+    color: #00FF00; 
+    font-size: 18px;
+    list-style-type: decimal;
+  }
+  
+  ul.level2 {
+    color: #FFFF00; 
+    list-style-type: circle;
+  }
+  
+  ul.level3 {
+    color: #FF69B4; 
+    list-style-type: square;
+  }
+  
+  ol.numberedList {
+    color: #FFA500; 
+    list-style-type: decimal;
+  }
+  
+  ol.numberedList2 {
+    color: #808080; 
+    list-style-type: decimal;
+  }

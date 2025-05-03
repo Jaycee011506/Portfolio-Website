@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Checker</title>
+   
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #numberCheckerBox {
+          width: 664px;
+          height: 552px;
+        }
+      </style>
+      
+</head>
+
+<body class="bg-light">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+      <div class="container mt-5 p-4 bg-white shadow rounded" id="numberCheckerBox">
+        <h2 class="mb-4">Number Checker</h2>
+        <div class="form-group row">
+            <label for="numberInput" class="col-sm-4 col-form-label">Enter a number:</label>
+            <div class="col-sm-5">
+                <input type="number" class="form-control" id="numberInput" placeholder="Type a number">
+            </div>
+            <div class="col-sm-3">
+                <button class="btn btn-primary w-100" onclick="getResult()">Submit</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-sm-12">
+                <div id="result1" class="font-weight-bold"></div>
+                <div id="result2" class="font-weight-bold"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        function getResult() {
+            // Get the number from input
+            const num = parseInt(document.getElementById("numberInput").value, 10);
+            const result1 = document.getElementById("result1");
+            const result2 = document.getElementById("result2");
+
+            // Reset results
+            result1.textContent = "";
+            result2.textContent = "";
+
+            // Check if input is a valid number
+            if (isNaN(num)) {
+                result1.textContent = "Please enter a valid number.";
+                return;
+            }
+
+            // EVEN or ODD
+            if (num % 2 === 0) {
+                result1.textContent = "THE NUMBER IS EVEN";
+            } else {
+                result1.textContent = "THE NUMBER IS ODD";
+            }
+
+            // PRIME, COMPOSITE, or INVALID
+            if (num <= 1) {
+                result2.textContent = "INVALID";
+            } else if (isPrime(num)) {
+                result2.textContent = "THE NUMBER IS PRIME";
+            } else {
+                result2.textContent = "THE NUMBER IS COMPOSITE";
+            }
+        }
+
+        // Helper function to check for prime
+        function isPrime(n) {
+            if (n <= 1) return false;
+            if (n === 2) return true;
+            if (n % 2 === 0) return false;
+            for (let i = 3; i <= Math.sqrt(n); i += 2) {
+                if (n % i === 0) return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

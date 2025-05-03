@@ -1,0 +1,34 @@
+body {
+    background-color: aliceblue;
+    font-family: Arial, sans-serif;
+   background-size: 100%;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+.links{
+    text-align: center;
+}
+.box {
+    display: flex;
+    justify-content: space-between;
+}
+.column {
+    width: 30%;
+    padding: 15px;
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+#col1 {
+    border: 5px solid;
+    background-color:skyblue; 
+}
+#col2 {
+    border: 5px solid;
+    background-color: #ffe2c0;
+}
+#col3 {
+    border: 5px solid; 
+    background-color: pink;
+}

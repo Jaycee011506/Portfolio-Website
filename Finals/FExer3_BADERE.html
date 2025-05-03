@@ -1,0 +1,64 @@
+s<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kilometers to Centimeters</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-box {
+            border: 4px solid black;
+            padding: 20px;
+            background: #fff;
+            margin: 40px auto;
+            width: 500px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        #result-box {
+            border: 3px solid black;
+            padding: 12px;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            background: #f8f9fa;
+        }
+        @media (max-width: 600px) {
+            .custom-box {
+                width: 95%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    <div class="custom-box">
+        <h3 class="font-weight-bold mb-4">Kilometers to Centimeters</h3>
+        <div class="input-group">
+            <input type="number" class="form-control" id="value" placeholder="Enter a Number">
+            <div class="input-group-append">
+                <button class="btn btn-outline-dark" onclick="convert();">Submit</button>
+            </div>
+        </div>
+        <div id="result-box">
+            <span id="result"></span>
+        </div>
+    </div>
+
+    <script>
+        function convert() {
+            var km = document.getElementById('value').value;
+            var resultSpan = document.getElementById('result');
+            if (km === "" || isNaN(km)) {
+                resultSpan.textContent = "Please enter a valid number.";
+                return;
+            }
+            var cm = parseFloat(km) * 100000;
+            resultSpan.textContent = km + " KILOMETER IS " + cm + " cm.";
+        }
+    </script>
+</body>
+</html>

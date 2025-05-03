@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src = "js/jsFile.js">
+    <title>Calculator</title>
+    
+    
+    </script>
+<style>
+    input{
+        height: 30px;
+        width: 90%;
+    }
+    button{
+        background-image: linear-gradient();
+        height: 50px;
+        width: 80;
+        border-color:whitesmoke;
+    }
+    table{
+        margin-top: 100px;
+    }
+  
+</style>
+</head>
+<body>
+    <table border="3"align="center">
+    <h1 align ="center">SIMPLE CALCULATOR</h1>
+    <div id = "content"></div>
+    <tr>
+        <td>
+    
+    <input type="text" id="num1" placeholder="ENTER A NUMBER"><br>
+    <input type="text" id="num2" placeholder="ENTER A NUMBER"><br>
+    
+    <br />
+    <button onclick="add('+')">Add</button>
+    <button onclick="Subtract('-')">Subtract</button>
+    <button onclick="Multiply('*')">Multiply</button>
+    <button onclick="Divide('/')">Divide</button>
+</td>
+</tr>
+<tr>
+    <td>
+    <h2>Result: <span id="result">-</span></h2>
+</tr>
+</td>
+</table>
+</body>
+</html>
+
+
