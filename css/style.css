@@ -82,3 +82,18 @@ body {
   #backToTop:hover {
     background-color: #0b5ed7;
   }
+
+.lb-image {
+  border: 8px solid #0d6efd !important;  /* blue border */
+  border-radius: 10px !important;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7) !important;
+}
+.gallery-img {
+  border: 3px solid #ccc;
+  border-radius: 8px;
+  padding: 4px;
+  transition: border-color 0.3s ease;
+}
+.gallery-img:hover {
+  border-color: #0d6efd;
+}
